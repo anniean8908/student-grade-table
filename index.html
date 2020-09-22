@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg=="
     crossorigin="anonymous" />
-
 </head>
 
 <body>
@@ -31,8 +30,9 @@
           <!-- table list area -->
         </tbody>
       </table>
-      <div class="col-4 px-5">
+      <div class="col-4 pl-5">
         <h4>Add Grade</h4>
+        <form id="formData">
         <div>
           <label for="name"></label>
             <div class="input-group">
@@ -41,7 +41,7 @@
                  <img src="./icon/people.svg">
                 </div>
               </div>
-              <input type="text" class="form-control" id="studentName" placeholder="Student Name">
+              <input type="text" name="name" class="form-control" id="studentName" placeholder="Student Name">
           </div>
         </div>
         <div>
@@ -52,7 +52,7 @@
                   <img src="./icon/note.svg">
                 </div>
               </div>
-          <input type="text" class="form-control" id="studentCourse" placeholder="Student Course">
+          <input type="text" name="course" class="form-control" id="studentCourse" placeholder="Student Course">
         </div>
         <div>
           <label for="grade"></label>
@@ -62,10 +62,11 @@
                 <img src="./icon/mortar-board.svg">
               </div>
             </div>
-            <input type="number" class="form-control" id="studentGrade" placeholder="Student Grade">
+            <input type="number" name="grade" class="form-control" id="studentGrade" placeholder="Student Grade">
           </div>
-          <button type="submit" class="btn btn-success my-4 px-4">Add</button>
-          <button type="reset" class="btn btn-light m-4 px-3 border">Cancel</button>
+          <button type="submit" id="add" class="btn btn-success my-4 px-4">Add</button>
+          <button type="reset" class="btn btn-light my-4 px-3 border">Cancel</button>
+        </form>
       </div>
     </div>
   </div>
@@ -73,6 +74,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
     integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ=="
     crossorigin="anonymous"></script>
+
+  <script src="components/grade-form.js"></script>
   <script src="components/page-header.js"></script>
   <script src="components/grade-table.js"></script>
   <script src="components/app.js"></script>
