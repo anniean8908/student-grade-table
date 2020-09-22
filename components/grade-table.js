@@ -2,8 +2,8 @@ class GradeTable {
   constructor(tableElement){
     this.tableElement = tableElement;
   }
+
   render(rowData){
-    console.log(rowData)
     var name = rowData.name;
     var course = rowData.course;
     var grade = rowData.grade;
@@ -23,6 +23,7 @@ class GradeTable {
 
     return rowElt;
   }
+
   updateGrades(grades){
     for (var i = 0; i < grades.length; i++) {
       var row = this.render(grades[i]);
