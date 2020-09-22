@@ -25,6 +25,7 @@ class App {
 
   handleGetGradesSuccess(grades){
     this.gradeTable.updateGrades(grades);
+    this.pageHeader.updateAverage(grades);
   }
 
   handleGetGradesError(error){
