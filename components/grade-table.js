@@ -25,6 +25,7 @@ class GradeTable {
   }
 
   updateGrades(grades){
+    this.tableElement.innerHTML = "";
     for (var i = 0; i < grades.length; i++) {
       var row = this.render(grades[i]);
       this.tableElement.appendChild(row);
