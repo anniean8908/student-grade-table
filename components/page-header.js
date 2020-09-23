@@ -9,6 +9,9 @@ class PageHeader{
       total+=grade;
     }
     var avgGrade =total/grades.length;
+    if (isNaN(avgGrade)) {
+      avgGrade = "No Grade"
+    }
     this.avgGradeElt.textContent = avgGrade;
   }
 }
